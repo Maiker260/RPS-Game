@@ -1,32 +1,58 @@
 
-let optionsAvail = ["rock", "paper", "scissors"];
+const optionsAvail = ["rock", "paper", "scissors"];
+let playerScore = 0;
+let computerScore = 0;
+const rounds = 5;
 
+// Function to randomly select computer's choice from the Options Available in the Game.
 function getComputerChoice() {
     return optionsAvail[Math.floor(Math.random() * optionsAvail.length)];
 }
 
-playerSelection = "";
+// Function to play a single round.
+function playRound() {
 
-function playGame(playerSelection, computerSelection) {
+    const playerSelect = prompt("Type your option:");
 
-    playerSelection = prompt("Type your Option: ");
-    computerSelection = getComputerChoice();
+    // Check if the user clicked Cancel or entered an empty value before converting the input to lowerCase.
+    if (playerSelect === null || playerSelect === "") {
+        console.log("No option provided or it was canceled");
+        return; // Exit the function if canceled.
+    };
+
+    const playerSelection = playerSelect.toLowerCase().trim();
+    const computerSelection = getComputerChoice();
 
     if (!optionsAvail.includes(playerSelection)) {
-        return alert("Invalid Option");
+        console.log("Invalid Option");
     } else if (playerSelection === computerSelection) {
-        return alert("You tied");
+        console.log("You tied");
+    
     } else if (
-        playerSelection === "paper" && computerSelection === "rock"
-        || playerSelection === "rock" && computerSelection === "scissors"
-        || playerSelection === "scissors" && computerSelection === "paper"
+        playerSelection === "paper" && computerSelection === "rock" ||
+        playerSelection === "rock" && computerSelection === "scissors" ||
+        playerSelection === "scissors" && computerSelection === "paper"
     ) {
-        return alert("You Win!!");
+        playerScore += 1;
+        console.log("You Win!!");
     } else {
-        return alert(`You Lose, ${computerSelection} beats ${playerSelection}`);
+        computerScore += 1;
+        console.log(`You Lose, ${computerSelection} beats ${playerSelection}`);
     }
 }
 
-console.log(getComputerChoice());
+// Function to print the final game results
+function printGameResults() {
+    if (playerScore > computerScore) {
+        console.log(`Player Wins with ${playerScore} points!!!`);
+    } else {
+        console.log(`Computer Wins with ${computerScore} points!!!`);
+    }
+}
 
-playGame();
+// Loop to play the specified number of rounds.
+for (let i = 0; i < rounds; i++) {
+    playRound();
+}
+// Print the final game results.
+printGameResults();
