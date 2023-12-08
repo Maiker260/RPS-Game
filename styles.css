@@ -8,16 +8,30 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+    /* Title  */
+
 main {
     text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
+}
+
+.title {
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.description {
+    padding: 10px;
 }
 
 /* Game Options */
 
 .flex {
     display: flex;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .game_container {
@@ -48,12 +62,19 @@ main {
     width: 130px;
     height: 25px;
     border-radius: 50px;
-    font-weight: bold;
     font-size: 15px;
     background-color: black;
     color: white;
-    border: 1px solid white;
-    
+    border: 1px solid black;
+    transition: all 0.1s linear;
+}
+
+.options_btn:hover {
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+    font-size: 15px;
+    box-shadow: 0 0 10px rgb(128, 131, 103);
+    padding-bottom: 2px;
 }
 
 /* Game Results */
@@ -84,12 +105,11 @@ main {
 }
 
 .list {
-    margin: 25px;
+    margin: 17px;
 }
 
 .sub_title {
     padding-top: 5px;
-    font-weight: bold;
 }
 
   /* Footer */
