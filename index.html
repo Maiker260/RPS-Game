@@ -9,45 +9,47 @@
 </head>
 <body>
     <main>
-        <h1>ROCK-PAPER-SCISSORS GAME</h1>
-        <h2>Choose between Rock, Paper and Scissors to win your oponent.</h2>
+        <h1 class="title">ROCK-PAPER-SCISSORS GAME</h1>
+        <h2 class="description">Choose between Rock, Paper and Scissors to win your oponent.</h2>
     </main> 
-    <section>
-        <div class="game container">
-            <figure class="options_pic flex">
-                <img src="./Pictures/Rock.png" />
+    <section class="game_container flex">
+        <div class="options_container flex">
+            <figure class="game_options flex">
+                <img class="pic" src="./Pictures/Rock.png" />
                 <button class="options_btn">ROCK</button>
             </figure>
-            <figure class="options_pic flex">
-                <img src="./Pictures/Paper.png" />
+            <figure class="game_options flex">
+                <img class="pic" src="./Pictures/Paper.png" />
                 <button class="options_btn">PAPER</button>
             </figure>
-            <figure class="options_pic flex">
-                <img src="./Pictures/Scissors.png" />
+            <figure class="game_options flex">
+                <img class="pic" src="./Pictures/Scissors.png" />
                 <button class="options_btn">SCISSORS</button>
             </figure>
         </div>
-        <div class="results container">
-            <div class="score">
-                <h3>Score</h3>
+        <div class="results flex">
+            <div class="sco_hin container flex">
+                <div class="shared score">
+                    <h3>Score</h3>
+                </div>
+                <div class="shared hint">
+                    <h4>Hint</h4>
+                    <ul class="list">
+                        <li>Rock > Scissors</li>
+                        <li>Paper > Rock</li>
+                        <li>Scissors > Paper</li>
+                    </ul>
+                </div>
             </div>
-            <div class="history">    
+            <div class="history container">    
                 <h3>History</h3>
             </div>
         </div>
     </section>
     <section>
-        <div class="hint container">
-            <h4>Hint</h4>
-            <ul>
-                <li>Rock > Scissors</li>
-                <li>Paper > Rock</li>
-                <li>Scissors > Paper</li>
-            </ul>
-        </div>
     </section>
-    <footer>
-        <p>WEBPAGE UNDER CONSTRUCTION</p>
+    <footer class="flex">
+        <p class="footy">WEBPAGE UNDER CONSTRUCTION</p>
     </footer>
 </body>
 </html>
