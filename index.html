@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS_Game</title>
     <link href="./styles.css" rel="stylesheet" />
-    <!-- <script src="./script.js"></script> -->
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <main>
@@ -14,39 +14,42 @@
     </main> 
     <section class="game_container flex">
         <div class="options_container flex">
-            <figure class="game_options flex">
+            <figure id="rock" class="game_options flex">
                 <img class="pic" src="./Pictures/Rock.png" />
-                <button class="options_btn">ROCK</button>
+                <button class="options_btn bold">ROCK</button>
             </figure>
-            <figure class="game_options flex">
+            <figure id="paper" class="game_options flex">
                 <img class="pic" src="./Pictures/Paper.png" />
-                <button class="options_btn">PAPER</button>
+                <button class="options_btn bold">PAPER</button>
             </figure>
-            <figure class="game_options flex">
+            <figure id="scissors" class="game_options flex">
                 <img class="pic" src="./Pictures/Scissors.png" />
-                <button class="options_btn">SCISSORS</button>
+                <button class="options_btn bold">SCISSORS</button>
             </figure>
         </div>
         <div class="results flex">
             <div class="sco_hin container flex">
                 <div class="shared score">
-                    <h3 class="sub_title">Score</h3>
+                    <h3 class="sub_title bold">Score</h3>
+                    <div id="score"></div>
                 </div>
-                <div class="shared hint">
-                    <h3 class="sub_title">Hint</h3>
+                <div id="hint" class="shared hint">
+                    <h3  class="sub_title bold">Hint</h3>
                     <ul class="list">
-                        <li>Rock > Scissors</li>
-                        <li>Paper > Rock</li>
-                        <li>Scissors > Paper</li>
+                        <li id="rock_wins" class="bold">Rock > Scissors</li>
+                        <li id="paper_wins" class="bold">Paper > Rock</li>
+                        <li id="scissors_wins" class="bold">Scissors > Paper</li>
                     </ul>
                 </div>
             </div>
-            <div class="history container">
+            <div class="opo_his container">
                 <div class="shared">
-                    <h3 class="sub_title">Oponent's Choice</h3>
+                    <h3 class="sub_title bold">Oponent's Choice</h3>
+                    <div id="oponent_choice"></div>
                 </div>
                 <div class="shared">
-                    <h3 class="sub_title">History</h3>
+                    <h3 class="sub_title bold">History</h3>
+                    <div id="history"></div>
                 </div>
             </div>
         </div>
