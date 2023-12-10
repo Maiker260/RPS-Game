@@ -8,30 +8,30 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <main>
+    <header>
         <h1 class="title">ROCK-PAPER-SCISSORS GAME</h1>
         <h2 class="description">Choose between Rock, Paper and Scissors to win your oponent.</h2>
-    </main> 
+    </header> 
     <section class="game_container flex">
         <div class="options_container flex">
             <figure id="rock" class="game_options flex">
                 <img class="pic" src="./Pictures/Rock.png" />
-                <button class="options_btn bold">ROCK</button>
+                <button data-choice="rock" class="options_btn bold">ROCK</button>
             </figure>
             <figure id="paper" class="game_options flex">
                 <img class="pic" src="./Pictures/Paper.png" />
-                <button class="options_btn bold">PAPER</button>
+                <button data-choice="paper" class="options_btn bold">PAPER</button>
             </figure>
             <figure id="scissors" class="game_options flex">
                 <img class="pic" src="./Pictures/Scissors.png" />
-                <button class="options_btn bold">SCISSORS</button>
+                <button data-choice="scissors" class="options_btn bold">SCISSORS</button>
             </figure>
         </div>
-        <div class="results flex">
+        <div class="result_ctn flex">
             <div class="sco_hin container flex">
                 <div class="shared score">
                     <h3 class="sub_title bold">Score</h3>
-                    <div id="score"></div>
+                    <div id="score" class="results bold"></div>
                 </div>
                 <div id="hint" class="shared hint">
                     <h3  class="sub_title bold">Hint</h3>
@@ -45,14 +45,15 @@
             <div class="opo_his container">
                 <div class="shared">
                     <h3 class="sub_title bold">Oponent's Choice</h3>
-                    <div id="oponent_choice"></div>
+                    <div id="oponent_choice" class="results bold"></div>
                 </div>
                 <div class="shared">
                     <h3 class="sub_title bold">History</h3>
-                    <div id="history"></div>
+                    <div id="history" class="results bold"></div>
                 </div>
             </div>
         </div>
+        <button id="resetBtn" class="">RESET</button>
     </section>
     <footer class="flex">
         <p class="footy">WEBPAGE UNDER CONSTRUCTION</p>
