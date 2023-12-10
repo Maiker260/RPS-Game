@@ -57,9 +57,23 @@ function playRound(playerSelection) {
             addPlayDetails(playerScore, computerScore, computerSelection, playerSelection);
         }
         historyCounter++;
+    } else {
+        determineWinner();
     }
  }
     
+// Function to determine the Game Winner
+
+function determineWinner() {
+    if (playerScore > computerScore) { 
+        alert("Player Wins!!");
+    } else if (playerScore === computerScore) {
+        alert("You Tied!");
+    } else {
+        alert("Computer Wins!");
+    }
+}
+
 // Handle Game button click events
 function handleButtonClick(event) {
     const playerSelection = event.target.dataset.choice;
